@@ -42,4 +42,5 @@ end
 # To use debugger
 # gem 'debugger'
 
-gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter', '0.0.13'
