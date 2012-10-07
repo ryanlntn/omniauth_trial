@@ -34,4 +34,7 @@ OmniauthTrial::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  ENV['TWITTER_KEY'] = '6agmlbHSZV5mUsaAfFd2Yw'
+  ENV['TWITTER_SECRET'] = 'iQbRMYfukBeGGuVsk2VPECe2GMEa4EPAfxU3x31rO4'
 end
