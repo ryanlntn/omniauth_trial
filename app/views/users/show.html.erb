@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Provider:</b>
-  <%= @user.provider %>
-</p>
+	<%= image_tag(@user.image) %>
 
-<p>
-  <b>Uid:</b>
-  <%= @user.uid %>
-</p>
-
-<p>
-  <b>Name:</b>
-  <%= @user.name %>
-</p>
+<h1>
+  Hello <%= @user.name %>! Welcome to Omniauth Trial!
+</h1>
+<% if @user.location != "" %>
+  <p>How's it hanging in <%= @user.location %>?</p>
+<% end %>
+<% if @user.description != "" %>
+	<p>Would you say this describes you: <%= @user.description %>?</p>
+<% end %>
+<% if @user.phone %>
+  <p>Can I call you at <%= @user.phone %>?</p>
+<% end %>
+<% if @user.email %>
+	<p>Can I send you a message at <%= @user.email %></p>
+<% end %>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
