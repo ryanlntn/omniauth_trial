@@ -1,6 +1,6 @@
 OmniauthTrial::Application.routes.draw do
   resources :users
-  root :to => 'users#index'
+  root :to => 'index#index'
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
   match 'signout', to: 'sessions#destroy', as: 'signout'
