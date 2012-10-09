@@ -1,11 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Hello World</h1>
-<!--	<%= image_tag(@user.image) %>
+<% if @user.image %>
+	<%= image_tag(@user.image) %>
+<% end %>
 
-<h1>
-  Hello <%= @user.name %>! Welcome to Omniauth Trial!
-</h1>
+<% if @user.name %>
+	<h1>
+	  Hello <%= @user.name %>! Welcome to Omniauth Trial!
+	</h1>
+<% end %>
 <% if @user.location != "" %>
   <p>How's it hanging in <%= @user.location %>?</p>
 <% end %>
@@ -17,7 +20,7 @@
 <% end %>
 <% if @user.email %>
 	<p>Can I send you a message at <%= @user.email %></p>
-<% end %> -->
+<% end %>
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
